@@ -6,18 +6,10 @@
                     <img src="@/assets/images/logo.svg" alt="logo" class="logo" />
                 </a>
                 <ul class="display-flex-row-center-center">
-                    <li class="text-color-primary">
-                        <a href="#" class="text-medium-16px">Əsas səhifə</a>
+                    <li class="text-color-primary" v-for="title in titles">
+                        <a href="#" class="text-medium-16px">{{ title }}</a>
                     </li>
-                    <li class="text-color-primary">
-                        <a href="#" class="text-medium-16px">Haqqımızda</a>
-                    </li>
-                    <li class="text-color-primary">
-                        <a href="#" class="text-medium-16px">Xidmətlərimiz</a>
-                    </li>
-                    <li class="text-color-primary">
-                        <a href="#" class="text-medium-16px">Əlaqə</a>
-                    </li>
+
                 </ul>
                 <ul class="display-flex-row-center-center">
                     <li class="menu-search">
@@ -63,6 +55,15 @@
 </template>
 
 <script>
+
+export default{
+    data(){
+        return{
+            titles: ["Əsas səhifə" , "Haqqımızda", "Xidmətlərimiz", "Əlaqə"]
+        }
+    }
+}
+
 
 </script>
 
